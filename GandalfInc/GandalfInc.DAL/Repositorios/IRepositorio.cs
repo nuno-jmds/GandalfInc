@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace GandalfInc.DAL.Repositorios
 {
@@ -6,8 +7,9 @@ namespace GandalfInc.DAL.Repositorios
     {
         //CRUD
         void Criar(T obj);
-        T Atualizar(string nomeAntigo, string nomeNovo);
-        T ObterPorNome(string Nome);
+        T Atualizar(T obj, T novoObj);
+        T ObterPorIdentificador(Guid guid);
+        T ObterPorNome(string nome);
         List<T> ObterTodos();
         void Apagar(T obj);
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GandalfInc.DAL.Entidades
 {
-    class Venda:IImpressora
+    public class Venda:IImpressora
     {
 
         public PontoDeVenda PontoDeVenda { get; set; }
@@ -28,7 +28,8 @@ namespace GandalfInc.DAL.Entidades
         {
             var sb = new StringBuilder();
             sb.AppendLine($"Loja:{PontoDeVenda.Loja.Nome}");
-            sb.AppendLine($"Contacto: {PontoDeVenda.Loja.Contacto.Telefone}");
+            sb.AppendLine($"Contacto: {PontoDeVenda.Loja.Telefone}");
+            sb.AppendLine($"Contacto: {PontoDeVenda.Loja.Email}");
             sb.AppendLine($"Morada: {PontoDeVenda.Loja.Morada}");
             sb.AppendLine($"NIF: {PontoDeVenda.Loja.NumeroFiscal}");
 

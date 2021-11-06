@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,13 @@ namespace GandalfInc.DAL.Entidades
 {
     public enum TipoDePagamento
     {
-        Indefinido=0,
-        Multibanco=1,
-        Dinheiro=2,
-        MBWay=3
+        [Description("Indefinido")]
+        Indefinido = 0,
+        [Description("Multibanco")]
+        Multibanco = 1,
+        [Description("Dinheiro")]
+        Dinheiro = 2,
+        [Description("MbWay")]
+        MbWay = 3
     }
 }

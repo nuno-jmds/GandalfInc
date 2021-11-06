@@ -10,7 +10,7 @@ namespace GandalfInc.DAL.Infraestrutura
     {
         public void GerarRecibo()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Imprimir Fatura");
         }
     }
 }

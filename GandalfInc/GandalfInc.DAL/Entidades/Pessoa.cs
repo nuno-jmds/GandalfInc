@@ -10,7 +10,13 @@ namespace GandalfInc.DAL.Entidades
     {
         public string NumeroFiscal { get; set; }
         public Morada Morada { get; set; }
-        public Contacto Contacto { get; set; }
+        public string Telefone { get; set; }
+        public string Telemovel { get; set; }
+        public string Email { get; set; }
 
+        public Pessoa()
+        {
+                Morada = new Morada(); 
+        }
     }
 }

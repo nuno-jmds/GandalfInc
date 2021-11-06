@@ -7,18 +7,26 @@ namespace GandalfInc.DAL.Entidades
         protected Entidade()
         {
             Identificador = Guid.NewGuid();
+            DataRegisto= DateTime.Now;
+            dataAlteracao = DateTime.Now;
+            Ativo = true;
         }
 
         protected Entidade(string nome)
         {
             Identificador = Guid.NewGuid();
+            DataRegisto = DateTime.Now;
+            dataAlteracao = DateTime.Now;
+            Ativo = true;
             Nome = nome;
         }
 
-        public Guid Identificador { get; }
+        public Guid Identificador { get; set; }
         public string Nome { get; set; }
 
         public bool Ativo { get; set; }
+
+        public DateTime DataRegisto { get;}
 
         private DateTime dataAlteracao;
 
