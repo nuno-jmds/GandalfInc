@@ -13,8 +13,7 @@ namespace GandalfInc.DAL.Repositorios
 
         public RepositorioEntidade()
         {
-            ListaEntidades = new List<Entidade>();
-            
+            ListaEntidades = new List<Entidade>(); 
         }
 
         public void Apagar(Entidade obj)
@@ -40,11 +39,9 @@ namespace GandalfInc.DAL.Repositorios
             var resultado = ListaEntidades.FirstOrDefault(entidade => entidade.Identificador == guid);
             return resultado;
         }
-
-
-        public Entidade ObterPorNome(string nome)
+        public List<Entidade> ObterPorNome(string nome)
         {
-            var resultado = ListaEntidades.FirstOrDefault(entidade => entidade.Nome == nome);
+            var resultado = ListaEntidades.Where(entidade => entidade.Nome == nome).ToList();
             return resultado;
         }
 

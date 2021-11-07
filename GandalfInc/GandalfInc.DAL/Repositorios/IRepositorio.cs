@@ -9,7 +9,7 @@ namespace GandalfInc.DAL.Repositorios
         void Criar(T obj);
         T Atualizar(T obj, T novoObj);
         T ObterPorIdentificador(Guid guid);
-        T ObterPorNome(string nome);
+        List<T> ObterPorNome(string nome);
         List<T> ObterTodos();
         void Apagar(T obj);
     }

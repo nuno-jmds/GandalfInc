@@ -20,19 +20,84 @@ namespace GandalfInc.DAL.Entidades
 
         public TipoDePagamento TipoDePagamento { get; set; }
 
-        public Decimal ValorTotal { get; set; }
+        private Decimal valorTotal;
+        public Decimal ValorTotal { get { return valorTotal; } }
 
         public DetalheVenda DetalheVenda{get;set;}
 
+
+        private void CalcularValorTotal()
+        {
+            
+        }
+        public bool ValidarVenda(Stock stock) 
+        {
+            var quant1 = DetalheVenda.Produtos
+               .GroupBy(produto => produto.Nome).ToList();
+            //int quantidade = 0;
+            
+            
+            Decimal preco = 0;
+            foreach (var product in DetalheVenda.Produtos)
+                {
+                    preco += product.PrecoUnitario*product.Quantidade;
+                }
+            
+            var quantidadePorProduto1 = DetalheVenda.Produtos
+                .GroupBy(produto => produto.Nome)
+                .Select(produto =>
+                new
+                {
+                    Nome = produto.Key,
+                    Quantidade = produto.Count()
+                }).ToList();
+
+
+            var quantidadePorProduto = DetalheVenda.Produtos
+               .GroupBy(produto => produto.Nome)
+               .Select(produto =>
+               new
+               {
+                   Nome = produto.Key,
+                   Quantidade = produto.Count()
+               }).ToList();
+
+            //Impedir "devolucao de produto"
+            var existeAlgumItemComValorInvalido = quantidadePorProduto.Any(produto => produto.Quantidade <= 0);
+            if (existeAlgumItemComValorInvalido || DetalheVenda.Produtos.Count <= 0)
+            {
+                return false;
+            }
+
+            foreach (var produtoPedido in quantidadePorProduto)
+            {
+                var quantidadeEmStock = stock.ProdutosParaVenda.Where(x => x.Nome == produtoPedido.Nome).Count();
+
+                if (quantidadeEmStock < produtoPedido.Quantidade)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public bool EfetuaVenda(Stock stock) 
+        {
+
+            return true;
+        }
         public void GerarRecibo() 
         {
             var sb = new StringBuilder();
             sb.AppendLine($"Loja:{PontoDeVenda.Loja.Nome}");
             sb.AppendLine($"Contacto: {PontoDeVenda.Loja.Telefone}");
             sb.AppendLine($"Contacto: {PontoDeVenda.Loja.Email}");
-            sb.AppendLine($"Morada: {PontoDeVenda.Loja.Morada}");
+            sb.AppendLine($"Morada: {PontoDeVenda.Loja.Morada.Rua}");
+            sb.AppendLine($"Morada: {PontoDeVenda.Loja.Morada.CodigoPostal}");
+            sb.AppendLine($"Morada: {PontoDeVenda.Loja.Morada.Concelho}");
             sb.AppendLine($"NIF: {PontoDeVenda.Loja.NumeroFiscal}");
-
+            
+            DataVenda = DateTime.Now;
             sb.AppendLine($"FaturaNr: {DataVenda.Year}/{NumeroSerie}");
             sb.AppendLine($"Data/Hora: {DataVenda.Year}/{DataVenda.Month}/{DataVenda.Day} {DataVenda.Hour}:{DataVenda.Minute} ");
 
@@ -44,6 +109,8 @@ namespace GandalfInc.DAL.Entidades
 
             sb.AppendLine($"Vendedor: {Funcionario.Nome}");
             sb.AppendLine($"Identificação:{Funcionario.Identificador}");
+
+            Console.WriteLine(sb);
         }
 
     }

@@ -8,9 +8,19 @@ namespace GandalfInc.DAL.Entidades
 {
     public class Produto : Entidade
     {
+        public Produto()
+        {
+            Quantidade = 1;
+        }
         public decimal PrecoUnitario { get; set; }
 
+        public int Quantidade { get; set; }
+
         public string Fabricante { get; set; }
+
+        public string Marca { get; set; }
+
+        public string Categoria { get; set; }
 
         public Fornecedor Fornecedor { get; set; }
 

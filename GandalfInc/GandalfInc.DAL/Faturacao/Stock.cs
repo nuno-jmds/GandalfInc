@@ -8,7 +8,7 @@ namespace GandalfInc.DAL.Entidades
 {
     public class Stock
     {
-        public List<Produto> ProdutosPartaVenda { get; set; }
+        public List<Produto> ProdutosParaVenda { get; set; }
 
         public bool ValidarDisponibilidade(List<Produto> produtosSolicitados)
         {
@@ -30,9 +30,9 @@ namespace GandalfInc.DAL.Entidades
 
             foreach (var produtoPedido in quantidadePorProduto)
             {
-                var quantidadeEmStock = ProdutosPartaVenda.Where(x => x.Nome == produtoPedido.Nome).Count();
+                var quantidadeEmStock = ProdutosParaVenda.Where(x => x.Nome == produtoPedido.Nome).Count();
 
-                if (quantidadeEmStock < produtoPedido.Quantidade ||produtoPedido.Quantidade<=0)
+                if (quantidadeEmStock < produtoPedido.Quantidade)
                 {
                     return false;
                 }
