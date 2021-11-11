@@ -33,8 +33,12 @@ namespace GandalfInc.DAL.Entidades
         public bool ValidarVenda(Stock stock) 
         {
             var quant1 = DetalheVenda.Produtos
-               .GroupBy(produto => produto.Nome).ToList();
-            //int quantidade = 0;
+               .GroupBy(produto => produto.Nome).Select(x=>new 
+               {
+                   Nome = x.Key,
+                   Quantidade=x.Sum(x=>x.Quantidade)
+               } ).ToList();
+           
             
             
             Decimal preco = 0;

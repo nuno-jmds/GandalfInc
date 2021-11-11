@@ -67,7 +67,7 @@ namespace GandalfInc.DAL.Entidades.Tests
             };
             vendaParaOJoao.DetalheVenda.Produtos.Add(new Produto { Nome = "Smarthphone" ,
                 PrecoUnitario = 50,
-                Quantidade = 1,
+                Quantidade = 2,
             });
             vendaParaOJoao.DetalheVenda.Produtos.Add(new Produto { Nome = "Smarthphone",
                 PrecoUnitario = 50,

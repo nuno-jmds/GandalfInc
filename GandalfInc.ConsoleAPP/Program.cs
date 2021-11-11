@@ -102,7 +102,7 @@ namespace GandalfInc.ConsoleAPP
                 Cliente = cliente,
                 NumeroSerie = numeroDeSerie,
                 TipoDePagamento = tipoDePagamento,
-                ValorTotal = valorTotal,
+                //ValorTotal = valorTotal,
                 DetalheVenda = detalheVenda
 
             };
