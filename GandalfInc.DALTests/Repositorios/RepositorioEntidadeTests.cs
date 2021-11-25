@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GandalfInc.DAL.Entidades;
+using GandalfInc.BusinessLogicLayer.Repositorios;
+using Projeto.DataAccessLayer.Entidades;
 
 namespace GandalfInc.DAL.Repositorios.Tests
 {

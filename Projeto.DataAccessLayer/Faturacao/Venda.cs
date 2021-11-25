@@ -1,16 +1,18 @@
-﻿using GandalfInc.DAL.Faturacao;
-using GandalfInc.DAL.Infraestrutura;
+﻿
+using Projeto.DataAccessLayer.Entidades;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GandalfInc.DAL.Entidades
+namespace GandalfInc.DataAccessLayer.Faturacao
 {
-    public class Venda:IImpressora
+    public class Venda
     {
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
         public PontoDeVenda PontoDeVenda { get; set; }
         public Funcionario Funcionario { get; set; }
         public Cliente Cliente { get; set; }

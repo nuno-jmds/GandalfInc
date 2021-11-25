@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GandalfInc.BusinessLogicLayer.Repositorios
+namespace Projeto.DataAccessLayer.Repositorios
 {
     interface IRepositorio<T>
     {

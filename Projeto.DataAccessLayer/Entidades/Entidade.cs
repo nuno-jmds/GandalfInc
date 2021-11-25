@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Projeto.DataAccessLayer.Utils;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GandalfInc.DAL.Entidades
+namespace GandalfInc.DataAccessLayer.Entidades
 {
     public abstract class Entidade
     {
@@ -21,12 +24,25 @@ namespace GandalfInc.DAL.Entidades
             Nome = nome;
         }
 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Identificador { get; set; }
-        public string Nome { get; set; }
+        
+
+        private string nome;
+        [Required, MaxLength(255)]
+        public virtual string Nome
+        {
+            get { return nome; }
+            set { //nome =  StringUtils.ToTitleCase(value);
+                nome = value.ToTitleCase();
+            }
+        }
+
 
         public bool Ativo { get; set; }
 
-        public DateTime DataRegisto { get;}
+        public DateTime? DataRegisto { get;}
 
         private DateTime dataAlteracao;
 

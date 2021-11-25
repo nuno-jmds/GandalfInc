@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Projeto.DataAccessLayer.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GandalfInc.DAL.Entidades
+namespace GandalfInc.DataAccessLayer.Entidades
 {
     public class Produto : Entidade
     {

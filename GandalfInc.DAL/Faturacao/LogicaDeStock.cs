@@ -1,13 +1,21 @@
-﻿using System;
+﻿using GandalfInc.DataAccessLayer.Entidades;
+using GandalfInc.DataAccessLayer.Faturacao;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GandalfInc.DAL.Entidades
+namespace GandalfInc.BusinessLogicLayer.Faturacao
 {
-    public class Stock
+    public class LogicaDeStock
     {
+        private Stock _stock { get; set; }
+
+        public LogicaDeStock(Stock stock)
+        {
+            _stock = stock;
+        }
         public List<Produto> ProdutosParaVenda { get; set; }
 
         public bool ValidarDisponibilidade(List<Produto> produtosSolicitados)

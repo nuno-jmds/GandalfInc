@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GandalfInc.DAL.Entidades
+namespace GandalfInc.DataAccessLayer.Faturacao
 {
     public enum TipoDePagamento
     {

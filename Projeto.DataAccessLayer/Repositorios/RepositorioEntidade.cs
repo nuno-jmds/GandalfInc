@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GandalfInc.BusinessLogicLayer.Repositorios
+namespace Projeto.DataAccessLayer.Repositorios
 {
     public class RepositorioEntidade : IRepositorio<Entidade>
     {
@@ -13,7 +13,7 @@ namespace GandalfInc.BusinessLogicLayer.Repositorios
 
         public RepositorioEntidade()
         {
-            ListaEntidades = new List<Entidade>(); 
+            ListaEntidades = new List<Entidade>();
         }
 
         public void Apagar(Entidade obj)

@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GandalfInc.DAL\GandalfInc.DAL.csproj" />
+    <ProjectReference Include="..\GandalfInc.DAL\GandalfInc.BusinessLogicLayer.csproj" />
   </ItemGroup>
 
 </Project>

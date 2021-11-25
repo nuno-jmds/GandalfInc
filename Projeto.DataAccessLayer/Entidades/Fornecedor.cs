@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GandalfInc.DAL.Entidades
+namespace Projeto.DataAccessLayer.Entidades
 {
-    public class Loja:Pessoa
+    public class Fornecedor : Pessoa
     {
-        public string Gerente { get; set; }
+        public int Pontuacao { get; set; }
 
     }
 }

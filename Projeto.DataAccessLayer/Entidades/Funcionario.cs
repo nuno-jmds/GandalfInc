@@ -1,12 +1,13 @@
-﻿using System;
+﻿using GandalfInc.DataAccessLayer.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GandalfInc.DAL.Entidades
+namespace Projeto.DataAccessLayer.Entidades
 {
-    public class Funcionario:Entidade
+    public class Funcionario : Entidade
     {
         public string UserName { get; set; }
         public string Password { get; set; }
