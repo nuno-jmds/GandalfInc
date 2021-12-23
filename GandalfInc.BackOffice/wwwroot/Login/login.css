@@ -1,0 +1,26 @@
+﻿body {
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mod {
+    
+    
+    width:25rem;
+
+}
+
+
+.center_btn {
+    padding-top:1rem;
+   
+    display: flex;
+    justify-content: center;
+}
+.empty_div {
+    height:20rem;
+   
+}

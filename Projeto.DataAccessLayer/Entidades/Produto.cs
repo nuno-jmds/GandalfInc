@@ -11,7 +11,7 @@ namespace GandalfInc.DataAccessLayer.Entidades
     {
         public Produto()
         {
-            Quantidade = 1;
+            Quantidade = 0;
         }
         public decimal PrecoUnitario { get; set; }
 

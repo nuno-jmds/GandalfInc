@@ -1,0 +1,180 @@
+﻿{
+  "data": [
+    {
+
+      "name": "Harry Potter",
+      "category": "Livro",
+      "quantity": "50",
+      "price": "20"
+
+    },
+    {
+
+      "name": "IPhone11",
+      "category": "Technology",
+      "quantity": "500",
+      "price": "1000"
+    },
+    {
+
+      "name": "Pen",
+      "category": "Office",
+      "quantity": "500",
+      "price": "2"
+    },
+    {
+
+      "name": "Harry Potter",
+      "category": "Livro",
+      "quantity": "50",
+      "price": "20"
+
+    },
+    {
+
+      "name": "IPhone11",
+      "category": "Technology",
+      "quantity": "500",
+      "price": "1000"
+    },
+    {
+
+      "name": "Pen",
+      "category": "Office",
+      "quantity": "500",
+      "price": "2"
+    },
+    {
+
+      "name": "Harry Potter",
+      "category": "Livro",
+      "quantity": "50",
+      "price": "20"
+
+    },
+    {
+
+      "name": "IPhone11",
+      "category": "Technology",
+      "quantity": "500",
+      "price": "1000"
+    },
+    {
+
+      "name": "Pen",
+      "category": "Office",
+      "quantity": "500",
+      "price": "2"
+    },
+    {
+
+      "name": "Harry Potter",
+      "category": "Livro",
+      "quantity": "50",
+      "price": "20"
+
+    },
+    {
+
+      "name": "IPhone11",
+      "category": "Technology",
+      "quantity": "500",
+      "price": "1000"
+    },
+    {
+
+      "name": "Pen",
+      "category": "Office",
+      "quantity": "500",
+      "price": "2"
+    },
+    {
+
+      "name": "Harry Potter",
+      "category": "Livro",
+      "quantity": "50",
+      "price": "20"
+
+    },
+    {
+
+      "name": "IPhone11",
+      "category": "Technology",
+      "quantity": "500",
+      "price": "1000"
+    },
+    {
+
+      "name": "Pen",
+      "category": "Office",
+      "quantity": "500",
+      "price": "2"
+    },
+    {
+
+      "name": "Harry Potter",
+      "category": "Livro",
+      "quantity": "50",
+      "price": "20"
+
+    },
+    {
+
+      "name": "IPhone11",
+      "category": "Technology",
+      "quantity": "500",
+      "price": "1000"
+    },
+    {
+
+      "name": "Pen",
+      "category": "Office",
+      "quantity": "500",
+      "price": "2"
+    },
+    {
+
+      "name": "Harry Potter",
+      "category": "Livro",
+      "quantity": "50",
+      "price": "20"
+
+    },
+    {
+
+      "name": "IPhone11",
+      "category": "Technology",
+      "quantity": "500",
+      "price": "1000"
+    },
+    {
+
+      "name": "Pen",
+      "category": "Office",
+      "quantity": "500",
+      "price": "2"
+    },
+    {
+
+      "name": "Harry Potter",
+      "category": "Livro",
+      "quantity": "50",
+      "price": "20"
+
+    },
+    {
+
+      "name": "IPhone11",
+      "category": "Technology",
+      "quantity": "500",
+      "price": "1000"
+    },
+    {
+
+      "name": "Pen",
+      "category": "Office",
+      "quantity": "500",
+      "price": "2"
+    }
+  ]
+}

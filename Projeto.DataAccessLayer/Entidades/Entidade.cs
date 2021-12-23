@@ -42,7 +42,12 @@ namespace GandalfInc.DataAccessLayer.Entidades
 
         public bool Ativo { get; set; }
 
-        public DateTime? DataRegisto { get;}
+        private DateTime dataRegisto;
+        public DateTime? DataRegisto 
+        { 
+            get { return dataRegisto; }
+            set { dataRegisto=DateTime.Now; } 
+        }
 
         private DateTime dataAlteracao;
 
