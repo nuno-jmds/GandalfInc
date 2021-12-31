@@ -1,0 +1,38 @@
+﻿body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-mod {
+    width: 70%;
+}
+
+
+.center_btn {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.empty_div {
+    height: 20rem;
+}
+
+.groupInput {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    flex: 1;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.pad_btn {
+    
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
